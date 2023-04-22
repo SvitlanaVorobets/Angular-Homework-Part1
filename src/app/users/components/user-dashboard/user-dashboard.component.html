@@ -1,0 +1,21 @@
+<mat-toolbar color="white">
+    <span>Users</span>
+  </mat-toolbar>
+<mat-toolbar id="action__row" class="action__row">
+    <div class="action__row__left">
+        <button class="action__row__button" (click)="selectAll()">Select all</button>
+        <button [disabled]="disabled" class="action__row__button" (click)="deleteItem()">Delete</button>
+        <mat-form-field appearance="fill">
+            <mat-label>Sorting</mat-label>
+            <mat-select (selectionChange)="sortItems()" [(ngModel)]="selectedValue">
+                <mat-option [value]="option.value" *ngFor="let option of options">{{ option.viewValue }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <input class="action__row__search" type="text" placeholder="Search users" [(ngModel)]="searchText">
+</mat-toolbar>
+<div class="user__list">
+    <div *ngFor="let user of users | filter: searchText">
+        <app-user-item #item [user]="user" (onChanged)="onChanged()" ></app-user-item>
+    </div>
+</div>

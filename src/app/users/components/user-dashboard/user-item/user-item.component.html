@@ -1,0 +1,7 @@
+<div class="user__item">
+    <mat-checkbox class="user__item__checkbox" [(ngModel)]="checked" (click)="change()"></mat-checkbox>
+    <img class="user__item__img" src="{{user?.image}}" alt="">
+    <p class="user__item__text">{{ user?.firstname }} {{ user?.lastname }}</p>
+    <p class="user__item__text">{{ user?.email }}</p>
+    <p class="user__item__text">{{ user?.phone }}</p>
+</div>

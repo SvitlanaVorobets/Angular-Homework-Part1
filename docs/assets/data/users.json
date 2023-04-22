@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "firstname": "Taras",
+        "lastname": "Scevchenko",
+        "email": "kobzar931814@gmail.com",
+        "phone": "0689318141",
+        "image": "https://i.pinimg.com/originals/c8/87/27/c88727f8224625678410ad44d9c36875.jpg"
+    },
+    {
+        "id": 2,
+        "firstname": "Ivan",
+        "lastname": "Franko",
+        "email": "foxmykyta1874@gmail.com",
+        "phone": "0682781874",
+        "image": "https://i.pinimg.com/originals/ee/e0/21/eee021abe355b8459aadca56b53d4073.jpg"
+    },
+    {
+        "id": 3,
+        "firstname": "Lesya",
+        "lastname": "Ukrainka",
+        "email": "forest25mavka@gmail.com",
+        "phone": "0682521871",
+        "image": "https://i.pinimg.com/564x/5f/be/63/5fbe63a6b2679260367a981e296faf8c.jpg"
+    },
+    {
+        "id": 4,
+        "firstname": "Olga",
+        "lastname": "Kobylianska",
+        "email": "valsemelancolique27@gmail.com",
+        "phone": "0627111863",
+        "image": "https://i.pinimg.com/564x/00/26/63/002663f86bed78a3cae4bc18995cd967.jpg"
+    },
+    {
+        "id": 5,
+        "firstname": "Mykhailo",
+        "lastname": "Kotsyubynskyi",
+        "email": "intermezzo1864@gmail.com",
+        "phone": "0681791864",
+        "image": "https://i.pinimg.com/564x/09/bc/73/09bc73ba14cb02bc96e0cb7ff5b220b0.jpg"
+    }
+]
