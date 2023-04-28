@@ -1,5 +1,7 @@
 .user__item{
     position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid lightgray;
     
     &__img{
         width: 100%;

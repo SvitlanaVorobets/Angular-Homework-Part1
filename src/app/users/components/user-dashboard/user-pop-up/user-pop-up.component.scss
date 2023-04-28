@@ -1,0 +1,65 @@
+.userForm{
+    padding: 50px;
+
+    &__row{
+        padding: 20px 10px 5px 0;
+
+        &__label{
+            display: block;
+        }
+
+        &__input{
+            padding: 10px;
+            border: 1px solid lightgray;
+            background-color: #e8edf9;
+            width: 250px;
+        }
+    }
+
+    &__cancelButton{
+        margin: 30px 5px;
+        border: none;
+        cursor: pointer;
+        color: cornflowerblue;
+        float: right;
+        padding: 5px 20px;
+    }
+
+    &__submitButton{
+        padding: 5px 20px;
+        color: white;
+        border: 1px solid black;
+        margin: 30px 5px;
+        cursor: pointer;
+        background-color: black;
+        float: right;
+
+        &:hover{
+            background-color: lavender;
+            color: black;
+            border: 1px solid black;
+        }
+
+        &:disabled{
+            border: 1px solid #999999;
+            background-color: #cccccc;
+            color: #666666;
+        }
+    }
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+@media(max-width: 500px){
+    .userForm{
+        padding: 20px;
+
+        &__row__input{
+            width: auto;
+        }
+    }
+}

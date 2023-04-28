@@ -12,7 +12,10 @@
             </mat-select>
         </mat-form-field>
     </div>
-    <input class="action__row__search" type="text" placeholder="Search users" [(ngModel)]="searchText">
+    <div>
+        <button class="action__row__button" (click)="addUser()">Add user</button>
+        <input class="action__row__search" type="text" placeholder="Search users" [(ngModel)]="searchText">
+    </div> 
 </mat-toolbar>
 <div class="user__list">
     <div *ngFor="let user of users | filter: searchText">

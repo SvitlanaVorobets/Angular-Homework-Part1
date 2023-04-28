@@ -7,14 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
+import { UserPopUpComponent } from './components/user-dashboard/user-pop-up/user-pop-up.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     UserDashboardComponent,
     UserItemComponent,
-    FilterPipe
+    FilterPipe,
+    UserPopUpComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +25,9 @@ import { FilterPipe } from './pipes/filter.pipe';
     MatSelectModule,
     MatCheckboxModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   exports: [
     UserDashboardComponent

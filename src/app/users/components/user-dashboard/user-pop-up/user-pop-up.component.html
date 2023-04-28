@@ -1,0 +1,56 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="userForm">
+    <h2>Add user</h2>
+    <div class="userForm__row">
+        <label for="firstName" class="userForm__row__label">First Name </label>
+        <input type="text" name="firstName" formControlName="firstName" class="userForm__row__input">
+    </div>
+    <div
+        *ngIf="firstName && firstName.errors && !firstName?.valid && (firstName?.dirty ||firstName?.touched)">
+        
+        <div [hidden]="!firstName!.errors['minlength']" class="error">
+            Min Length is 2
+        </div>
+        <div [hidden]="!firstName!.errors['required']" class="error">
+            First Name is required
+        </div>
+    </div>
+    <div class="userForm__row">
+        <label for="lastName" class="userForm__row__label">Last Name </label>
+        <input type="text" name="lastName" formControlName="lastName" class="userForm__row__input">
+    </div>
+    <div
+        *ngIf="lastName && lastName.errors && !lastName?.valid && (lastName?.dirty ||lastName?.touched)">
+        <div [hidden]="!lastName!.errors['required']" class="error">
+            Last Name is required
+        </div>
+        <div [hidden]="!lastName!.errors['minlength'] && !lastName!.errors['maxlength']" class="error">
+            Min length is 2 and max length is 60
+        </div>
+    </div>
+    <div class="userForm__row">
+        <label for="email" class="userForm__row__label">Email </label>
+        <input type="text" name="email" formControlName="email" class="userForm__row__input">
+    </div>
+    <div *ngIf="email && email.errors && !email!.valid && (email!.dirty ||email!.touched)">
+        <div [hidden]="!email!.errors['required']" class="error">
+            Email is required
+        </div>
+        <div [hidden]="!email!.errors['email']" class="error">
+            Invalid email
+        </div>
+    </div>
+    <div class="userForm__row">
+        <label for="phone" class="userForm__row__label">Phone </label>
+        <input type="text" name="phone" formControlName="phone" class="userForm__row__input">
+    </div>
+    <div *ngIf="phone && phone.errors && !phone!.valid && (phone!.dirty ||phone!.touched)">
+        <div [hidden]="!phone!.errors['required']" class="error">
+            Phone is required
+          </div>
+        <div [hidden]="!phone!.errors['pattern']" class="error">
+          Only numeric are allowed
+        </div>
+    </div>
+    <button type="submit" [disabled]="!userForm.valid" class="userForm__submitButton">Submit</button>
+    <button class="userForm__cancelButton" (click)="onCancel()">Cancel</button>
+</form>
